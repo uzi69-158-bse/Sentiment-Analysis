@@ -1,0 +1,41 @@
+# Data Configuration
+data:
+  raw_data_path: 'data/raw/Dataset.csv'
+  processed_data_path: 'data/processed/processed_reviews.csv'
+  train_data_path: 'data/processed/train_data.pt'
+  val_data_path: 'data/processed/val_data.pt'
+  test_data_path: 'data/processed/test_data.pt'
+
+# Model Configuration
+model:
+  name: 'bert-base-uncased'
+  num_classes: 2
+  max_length: 128
+  dropout: 0.3
+
+# Training Configuration
+training:
+  num_classes: 2
+  batch_size: 32
+  num_epochs: 5
+  learning_rate: 2e-5
+  scheduler_step_size: 1
+  scheduler_gamma: 0.9
+  early_stopping_patience: 3
+  model_save_path: 'saved_models/best_model.pth'
+
+# Hyperparameter Tuning
+hyperparameter_tuning:
+  n_trials: 20
+  study_name: 'sentiment_analysis_optimization'
+
+# Evaluation
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1
+
+testing:
+  batch_size: 32

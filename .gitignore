@@ -1,0 +1,12 @@
+# .gitignore
+
+__pycache__
+*.pyc
+.env
+venv/
+*.log
+*.csv
+*.json
+*.pkl
+saved_models/*.pth
+data/
